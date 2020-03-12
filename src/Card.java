@@ -53,4 +53,17 @@ public class Card {
         }
     }
 
+    public Boolean isSlappeable(String[] pile){
+        int length = pile.length - 1;
+        String firstNum = pile[0].substring(0,1);
+        String lastNum = pile[length].substring(0,1);
+        String secLastNum = pile[length - 1].substring(0,1);
+        String sandwitchNum = pile[length - 2].substring(0,1);
+        if(lastNum.equals(secLastNum) || lastNum.equals(sandwitchNum) || lastNum.equals(firstNum)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

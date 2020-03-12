@@ -16,7 +16,7 @@ public class Computer extends Player {
 
     String[] hand = this.getHand();
 
-    public void slap(String[] pile){
+    public void slap(String[] pile, Boolean isSlappeable){
         double startTime = System.currentTimeMillis();
         double totalTime = System.currentTimeMillis() - startTime;
         double secondsElapsed = totalTime / 1000;
@@ -28,7 +28,7 @@ public class Computer extends Player {
         } else if(this.hand.length < 15){
             timeToSlap = 1;
         }
-        if(isSlappeable(pile).equals(true) && timeToSlap == secondsElapsed){
+        if(isSlappeable.equals(true) && timeToSlap == secondsElapsed){
             System.out.println("You were too slow to slap!");
             this.gainCards(pile);
         }

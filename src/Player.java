@@ -86,20 +86,6 @@ public class Player {
     }
 
 
-    public Boolean isSlappeable(String[] pile){
-        int length = pile.length - 1;
-        Boolean trueFalse;
-        String firstNum = pile[0].substring(0,1);
-        String lastNum = pile[length].substring(0,1);
-        String secLastNum = pile[length - 1].substring(0,1);
-        String sandwitchNum = pile[length - 2].substring(0,1);
-        if(lastNum.equals(secLastNum) || lastNum.equals(sandwitchNum) || lastNum.equals(firstNum)){
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public int getRealLength(String[] str){
         int count = 0;
         for(int i = 0; i < str.length; i++){
@@ -117,23 +103,7 @@ public class Player {
         turnCount++;
     }
 
-//    public void deal(String[] allCards){
-//        String[] computerHand = new String[52];
-//        String[] playerHand = new String[52];
-//        for(int i = 0; i < allCards.length; i++){
-//            Random card = new Random();
-//            int a = card.nextInt(52);
-//            String cardHolder = allCards[i];
-//            allCards[i] = allCards[a];
-//            allCards[a] = cardHolder;
-//        }
-//        for(int n = 0; n < allCards.length / 2; n++){
-//            playerHand[n] = allCards[n];
-//            computerHand[allCards.length - n] = allCards[allCards.length - n];
-//            Human.setHand(playerHand);
-//            Computer.setHand(computerHand);
-//        }
-//    }
+
 }
 
 

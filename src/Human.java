@@ -40,13 +40,5 @@ public class Human extends Player {
         }
     }
 
-    public void slap(String[] pile){
-        Scanner slap = new Scanner(System.in);
-        String didSlap = slap.next();
-        if(didSlap.equals("!") && isSlappeable(pile).equals(true) /* && time == 1 second */){
-            this.gainCards(pile);
-        }
-    }
-
 
 }
